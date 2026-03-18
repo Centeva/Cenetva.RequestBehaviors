@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Centeva.RequestBehaviors.Common/Centeva.RequestBehaviors.Common.csproj" />
+    <Project Path="src/Centeva.RequestBehaviors.Mediator/Centeva.RequestBehaviors.Mediator.csproj" Id="e10dc90e-eed2-4ec3-8865-99ae9cd52993" />
+    <Project Path="src/Centeva.RequestBehaviors.MediatR/Centeva.RequestBehaviors.MediatR.csproj" Id="476e9c9e-3693-4b6f-aac8-386255a2209a" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Centeva.RequestBehaviors.Tests/Centeva.RequestBehaviors.Tests.csproj" Id="2c8141ab-ed9d-469e-abe8-387413e645c9" />
+  </Folder>
+</Solution>

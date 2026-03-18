@@ -1,0 +1,31 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Centeva</Authors>
+    <Company>Centeva</Company>
+    <Product>Centeva.RequestBehaviors</Product>
+    <Copyright>Copyright © Centeva</Copyright>
+    <PackageProjectUrl>https://github.com/centeva/Centeva.RequestBehaviors</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/centeva/Centeva.RequestBehaviors</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>mediatr;mediator;authorization;validation;cqrs;pipeline</PackageTags>
+    <Description>Request pipeline behaviors for MediatR and Mediator</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
