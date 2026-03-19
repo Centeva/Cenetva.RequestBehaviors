@@ -15,13 +15,13 @@ clean and reusable way that is not tied to any specific presentation layer
   - [Using with MediatR](#using-with-mediatr)
   - [Using with Mediator.SourceGenerator](#using-with-mediatorsourcegenerator)
   - [Validating a Request](#validating-a-request)
-    - [Validating with Result Types](#validating-with-result-types)
+    - [Validating with `Result` Types](#validating-with-result-types)
 - [Authorization](#authorization)
   - [Using with MediatR](#using-with-mediatr-1)
   - [Using with Mediator.SourceGenerator](#using-with-mediatorsourcegenerator-1)
   - [Authorization Requirements](#authorization-requirements)
   - [Request Authorizers](#request-authorizers)
-    - [Authorizing with Result Types](#authorizing-with-result-types)
+    - [Authorizing with `Result` Types](#authorizing-with-result-types)
 - [Contributing](#contributing)
   - [Running Tests](#running-tests)
   - [Deployment](#deployment)
@@ -45,6 +45,9 @@ If you are using multiple projects to separate Core/Domain,
 Application, and Web API layers (i.e., "Clean" or "Ports and Adapters"
 architecture) then reference from the project containing your request
 handlers.
+
+If you are migrating from the older `Centeva.RequestValidation` and
+`Centeva.RequestAuthorization` libraries, see the [migration guide](docs/Migrating.md) for instructions on updating your code.
 
 ## Validation
 
@@ -92,7 +95,7 @@ HTTP response or a ProblemDetails object.
 If your request handler returns a `Result` or `Result<T>` type (from the
 [Ardalis.Result](https://github.com/ardalis/Result) library), then validation
 failures will be returned as an invalid `Result` containing the validation
-errors instead of a thrown exception.  
+errors instead of a thrown exception.
 This allows you to handle validation errors in a more functional style, without
 relying on exceptions for control flow.
 
@@ -185,7 +188,7 @@ public class MustBeItemOwnerHandler : IRequestAuthorizationHandler<MustBeItemOwn
   }
 
   public async Task<AuthorizationResult> Handle(
-    MustBeItemOwnerRequirement requirement, 
+    MustBeItemOwnerRequirement requirement,
     CancellationToken cancellationToken)
   {
     var item = await _itemRepository.Get(requirement.ItemId, cancellationToken);
